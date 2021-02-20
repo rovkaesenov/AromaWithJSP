@@ -7,14 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Aroma Shop - Home</title>
-  <link rel="icon" href="<c:url value="/resource/static/img/Fevicon.png"/>" type="image/png">
-  <link rel="stylesheet" href="<c:url value="/resource/static/vendors/bootstrap/bootstrap.min.css"/>">
-  <link rel="stylesheet" href="<c:url value="/resource/static/vendors/fontawesome/css/all.min.css"/>">
-  <link rel="stylesheet" href="<c:url value="/resource/static/vendors/themify-icons/themify-icons.css"/>">
-  <link rel="stylesheet" href="<c:url value="/resource/static/vendors/nice-select/nice-select.css"/>">
-  <link rel="stylesheet" href="<c:url value="/resource/static/vendors/owl-carousel/owl.theme.default.min.css"/>">
-  <link rel="stylesheet" href="<c:url value="/resource/static/vendors/owl-carousel/owl.carousel.min.css"/>">
-  <link rel="stylesheet" href="<c:url value="/resource/static/css/style.css"/>">
+  <link rel="icon" href="<c:url value="/staticResources/static/img/Fevicon.png"/>" type="image/png">
+  <link rel="stylesheet" href="<c:url value="/staticResources/static/vendors/bootstrap/bootstrap.min.css"/>">
+  <link rel="stylesheet" href="<c:url value="/staticResources/static/vendors/fontawesome/css/all.min.css"/>">
+  <link rel="stylesheet" href="<c:url value="/staticResources/static/vendors/themify-icons/themify-icons.css"/>">
+  <link rel="stylesheet" href="<c:url value="/staticResources/static/vendors/nice-select/nice-select.css"/>">
+  <link rel="stylesheet" href="<c:url value="/staticResources/static/vendors/owl-carousel/owl.theme.default.min.css"/>">
+  <link rel="stylesheet" href="<c:url value="/staticResources/static/vendors/owl-carousel/owl.carousel.min.css"/>">
+  <link rel="stylesheet" href="<c:url value="/staticResources/static/css/style.css"/>">
 </head>
 <body>
     <!--================ Start Header Menu Area =================-->
@@ -22,7 +22,7 @@
 	  <div class="main_menu">
 		<nav class="navbar navbar-expand-lg navbar-light">
 		      <div class="container">
-			    <a class="navbar-brand logo_h" href="<c:url value="/rock/index"/>"><img src="<c:url value="/resource/static/img/logo.png"/>" alt=""></a>
+			    <a class="navbar-brand logo_h" href="<c:url value="/rock/index"/>"><img src="<c:url value="/staticResources/static/img/logo.png"/>" alt=""></a>
 			    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 				    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				  <span class="icon-bar"></span>
@@ -72,7 +72,7 @@
 		      <div class="row no-gutters align-items-center pt-60px">
 			    <div class="col-5 d-none d-sm-block">
 				  <div class="hero-banner__img">
-					<img class="img-fluid" src="<c:url value="/resource/static/img/home/hero-banner.png"/>" alt="">
+					<img class="img-fluid" src="<c:url value="/staticResources/static/img/home/hero-banner.png"/>" alt="">
 				  </div>
 			    </div>
 			    <div class="col-sm-7 col-lg-6 offset-lg-1 pl-4 pl-md-5 pl-lg-0">
@@ -152,7 +152,7 @@
 		      <div class="owl-carousel owl-theme" id="bestSellerCarousel">
 			    <div class="card text-center card-product">
 				  <div class="card-product__img">
-					<img class="img-fluid" src="<c:url value="/resource/static/img/product/product1.png"/>" alt="">
+					<img class="img-fluid" src="<c:url value="/staticResources/static/img/product/product1.png"/>" alt="">
 					<ul class="card-product__imgOverlay">
 					      <li><button><i class="ti-search"></i></button></li>
 					      <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -168,7 +168,7 @@
 
 			    <div class="card text-center card-product">
 				  <div class="card-product__img">
-					<img class="img-fluid" src="<c:url value="/resource/static/img/product/product2.png"/>" alt="">
+					<img class="img-fluid" src="<c:url value="/staticResources/static/img/product/product2.png"/>" alt="">
 					<ul class="card-product__imgOverlay">
 					      <li><button><i class="ti-search"></i></button></li>
 					      <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -184,7 +184,7 @@
 
 			    <div class="card text-center card-product">
 				  <div class="card-product__img">
-					<img class="img-fluid" src="<c:url value="/resource/static/img/product/product3.png"/>" alt="">
+					<img class="img-fluid" src="<c:url value="/staticResources/static/img/product/product3.png"/>" alt="">
 					<ul class="card-product__imgOverlay">
 					      <li><button><i class="ti-search"></i></button></li>
 					      <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -200,7 +200,7 @@
 
 			    <div class="card text-center card-product">
 				  <div class="card-product__img">
-					<img class="img-fluid" src="<c:url value="/resource/static/img/product/product4.png"/>" alt="">
+					<img class="img-fluid" src="<c:url value="/staticResources/static/img/product/product4.png"/>" alt="">
 					<ul class="card-product__imgOverlay">
 					      <li><button><i class="ti-search"></i></button></li>
 					      <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -216,7 +216,7 @@
 
 			    <div class="card text-center card-product">
 				  <div class="card-product__img">
-					<img class="img-fluid" src="<c:url value="/resource/static/img/product/product1.png"/>" alt="">
+					<img class="img-fluid" src="<c:url value="/staticResources/static/img/product/product1.png"/>" alt="">
 					<ul class="card-product__imgOverlay">
 					      <li><button><i class="ti-search"></i></button></li>
 					      <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -232,7 +232,7 @@
 
 			    <div class="card text-center card-product">
 				  <div class="card-product__img">
-					<img class="img-fluid" src="<c:url value="/resource/static/img/product/product2.png"/>" alt="">
+					<img class="img-fluid" src="<c:url value="/staticResources/static/img/product/product2.png"/>" alt="">
 					<ul class="card-product__imgOverlay">
 					      <li><button><i class="ti-search"></i></button></li>
 					      <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -248,7 +248,7 @@
 
 			    <div class="card text-center card-product">
 				  <div class="card-product__img">
-					<img class="img-fluid" src="<c:url value="/resource/static/img/product/product3.png"/>" alt="">
+					<img class="img-fluid" src="<c:url value="/staticResources/static/img/product/product3.png"/>" alt="">
 					<ul class="card-product__imgOverlay">
 					      <li><button><i class="ti-search"></i></button></li>
 					      <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -264,7 +264,7 @@
 
 			    <div class="card text-center card-product">
 				  <div class="card-product__img">
-					<img class="img-fluid" src="<c:url value="/resource/static/img/product/product4.png"/>" alt="">
+					<img class="img-fluid" src="<c:url value="/staticResources/static/img/product/product4.png"/>" alt="">
 					<ul class="card-product__imgOverlay">
 					      <li><button><i class="ti-search"></i></button></li>
 					      <li><button><i class="ti-shopping-cart"></i></button></li>
@@ -294,7 +294,7 @@
 			  <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
 				<div class="card card-blog">
 				    <div class="card-blog__img">
-					  <img class="card-img rounded-0" src="<c:url value="/resource/static/img/blog/blog1.png"/>" alt="">
+					  <img class="card-img rounded-0" src="<c:url value="/staticResources/static/img/blog/blog1.png"/>" alt="">
 				    </div>
 				    <div class="card-body">
 					  <ul class="card-blog__info">
@@ -311,7 +311,7 @@
 			  <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
 				<div class="card card-blog">
 				    <div class="card-blog__img">
-					  <img class="card-img rounded-0" src="<c:url value="/resource/static/img/blog/blog2.png"/>" alt="">
+					  <img class="card-img rounded-0" src="<c:url value="/staticResources/static/img/blog/blog2.png"/>" alt="">
 				    </div>
 				    <div class="card-body">
 					  <ul class="card-blog__info">
@@ -328,7 +328,7 @@
 			  <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
 				<div class="card card-blog">
 				    <div class="card-blog__img">
-					  <img class="card-img rounded-0" src="<c:url value="/resource/static/img/blog/blog3.png"/>" alt="">
+					  <img class="card-img rounded-0" src="<c:url value="/staticResources/static/img/blog/blog3.png"/>" alt="">
 				    </div>
 				    <div class="card-body">
 					  <ul class="card-blog__info">
@@ -408,12 +408,12 @@
 				<div class="single-footer-widget instafeed">
 				    <h4 class="footer_title">Gallery</h4>
 				    <ul class="list instafeed d-flex flex-wrap">
-					  <li><img src="<c:url value="/resource/static/img/gallery/r1.jpg"/>" alt=""></li>
-					  <li><img src="<c:url value="/resource/static/img/gallery/r2.jpg"/>" alt=""></li>
-					  <li><img src="<c:url value="/resource/static/img/gallery/r3.jpg"/>" alt=""></li>
-					  <li><img src="<c:url value="/resource/static/img/gallery/r5.jpg"/>" alt=""></li>
-					  <li><img src="<c:url value="/resource/static/img/gallery/r7.jpg"/>" alt=""></li>
-					  <li><img src="<c:url value="/resource/static/img/gallery/r8.jpg"/>" alt=""></li>
+					  <li><img src="<c:url value="/staticResources/static/img/gallery/r1.jpg"/>" alt=""></li>
+					  <li><img src="<c:url value="/staticResources/static/img/gallery/r2.jpg"/>" alt=""></li>
+					  <li><img src="<c:url value="/staticResources/static/img/gallery/r3.jpg"/>" alt=""></li>
+					  <li><img src="<c:url value="/staticResources/static/img/gallery/r5.jpg"/>" alt=""></li>
+					  <li><img src="<c:url value="/staticResources/static/img/gallery/r7.jpg"/>" alt=""></li>
+					  <li><img src="<c:url value="/staticResources/static/img/gallery/r8.jpg"/>" alt=""></li>
 				    </ul>
 				</div>
 			  </div>
@@ -466,13 +466,13 @@
 
 
 
-  <script src="<c:url value="/resource/static/vendors/jquery/jquery-3.2.1.min.js"/>"></script>
-  <script src="<c:url value="/resource/static/vendors/bootstrap/bootstrap.bundle.min.js"/>"></script>
-  <script src="<c:url value="/resource/static/vendors/skrollr.min.js"/>"></script>
-  <script src="<c:url value="/resource/static/vendors/owl-carousel/owl.carousel.min.js"/>"></script>
-  <script src="<c:url value="/resource/static/vendors/nice-select/jquery.nice-select.min.js"/>"></script>
-  <script src="<c:url value="/resource/static/vendors/jquery.ajaxchimp.min.js"/>"></script>
-  <script src="<c:url value="/resource/static/vendors/mail-script.js"/>"></script>
-  <script src="<c:url value="/resource/static/js/main.js"/>"></script>
+  <script src="<c:url value="/staticResources/static/vendors/jquery/jquery-3.2.1.min.js"/>"></script>
+  <script src="<c:url value="/staticResources/static/vendors/bootstrap/bootstrap.bundle.min.js"/>"></script>
+  <script src="<c:url value="/staticResources/static/vendors/skrollr.min.js"/>"></script>
+  <script src="<c:url value="/staticResources/static/vendors/owl-carousel/owl.carousel.min.js"/>"></script>
+  <script src="<c:url value="/staticResources/static/vendors/nice-select/jquery.nice-select.min.js"/>"></script>
+  <script src="<c:url value="/staticResources/static/vendors/jquery.ajaxchimp.min.js"/>"></script>
+  <script src="<c:url value="/staticResources/static/vendors/mail-script.js"/>"></script>
+  <script src="<c:url value="/staticResources/static/js/main.js"/>"></script>
 </body>
 </html>

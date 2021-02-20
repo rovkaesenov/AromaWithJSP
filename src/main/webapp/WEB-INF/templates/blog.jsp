@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Aroma Shop - Blog</title>
-    <link rel="icon" href="<c:url value="/resource/static/img/Fevicon.png"/>" type="image/png">
-    <link rel="stylesheet" href="<c:url value="/resource/static/vendors/bootstrap/bootstrap.min.css"/>">
-    <link rel="stylesheet" href="<c:url value="/resource/static/vendors/fontawesome/css/all.min.css"/>" >
-    <link rel="stylesheet" href="<c:url value="/resource/static/vendors/themify-icons/themify-icons.css"/>" >
-    <link rel="stylesheet" href="<c:url value="/resource/static/vendors/linericon/style.css"/>" >
-    <link rel="stylesheet" href="<c:url value="/resource/static/vendors/owl-carousel/owl.theme.default.min.css"/>">
-    <link rel="stylesheet" href="<c:url value="/resource/static/vendors/owl-carousel/owl.carousel.min.css"/>" >
-    <link rel="stylesheet" href="<c:url value="/resource/static/css/style.css"/>" >
+    <link rel="icon" href="<c:url value="/staticResources/static/img/Fevicon.png"/>" type="image/png">
+    <link rel="stylesheet" href="<c:url value="/staticResources/static/vendors/bootstrap/bootstrap.min.css"/>">
+    <link rel="stylesheet" href="<c:url value="/staticResources/static/vendors/fontawesome/css/all.min.css"/>" >
+    <link rel="stylesheet" href="<c:url value="/staticResources/static/vendors/themify-icons/themify-icons.css"/>" >
+    <link rel="stylesheet" href="<c:url value="/staticResources/static/vendors/linericon/style.css"/>" >
+    <link rel="stylesheet" href="<c:url value="/staticResources/static/vendors/owl-carousel/owl.theme.default.min.css"/>">
+    <link rel="stylesheet" href="<c:url value="/staticResources/static/vendors/owl-carousel/owl.carousel.min.css"/>" >
+    <link rel="stylesheet" href="<c:url value="/staticResources/static/css/style.css"/>" >
 </head>
 <body>
     <!--================ Start Header Menu Area =================-->
@@ -21,7 +21,7 @@
         <div class="main_menu">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container">
-                    <a class="navbar-brand logo_h" href="<c:url value="/rock/index"/>"><img src="<c:url value="/resource/static/img/logo.png"/>" alt=""></a>
+                    <a class="navbar-brand logo_h" href="<c:url value="/rock/index"/>"><img src="<c:url value="/staticResources/static/img/logo.png"/>" alt=""></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="icon-bar"></span>
@@ -89,7 +89,7 @@
       <div class="row">
         <div class="col-sm-6 col-lg-4 mb-4 mb-lg-0">
             <div class="categories_post">
-                <img class="card-img rounded-0" src="<c:url value="/resource/static/img/blog/cat-post/cat-post-3.jpg"/>" alt="post">
+                <img class="card-img rounded-0" src="<c:url value="/staticResources/static/img/blog/cat-post/cat-post-3.jpg"/>" alt="post">
                 <div class="categories_details">
                     <div class="categories_text">
                         <a th:href="@{/rock/single-blog}">
@@ -103,7 +103,7 @@
         </div>
         <div class="col-sm-6 col-lg-4 mb-4 mb-lg-0">
           <div class="categories_post">
-            <img class="card-img rounded-0" src="<c:url value="/resource/static/img/blog/cat-post/cat-post-2.jpg"/>" alt="post">
+            <img class="card-img rounded-0" src="<c:url value="/staticResources/static/img/blog/cat-post/cat-post-2.jpg"/>" alt="post">
             <div class="categories_details">
               <div class="categories_text">
                 <a th:href="@{/rock/single-blog}">
@@ -117,7 +117,7 @@
         </div>
         <div class="col-sm-6 col-lg-4 mb-4 mb-lg-0">
             <div class="categories_post">
-                <img class="card-img rounded-0" src="<c:url value="/resource/static/img/blog/cat-post/cat-post-1.jpg"/>" alt="post">
+                <img class="card-img rounded-0" src="<c:url value="/staticResources/static/img/blog/cat-post/cat-post-1.jpg"/>" alt="post">
                 <div class="categories_details">
                     <div class="categories_text">
                         <a th:href="@{/rock/single-blog}">
@@ -175,7 +175,7 @@
                           </div>
                           <div class="col-md-9">
                               <div class="blog_post">
-                                  <img src="<c:url value="/resource/static/img/blog/main-blog/m-blog-1.jpg"/>" alt="">
+                                  <img src="<c:url value="/staticResources/static/img/blog/main-blog/m-blog-1.jpg"/>" alt="">
                                   <div class="blog_details">
                                       <a th:href="@{/rock/single-blog}">
                                           <h2>Astronomy Binoculars A Great Alternative</h2>
@@ -223,7 +223,7 @@
                           </div>
                           <div class="col-md-9">
                               <div class="blog_post">
-                                  <img src="<c:url value="/resource/static/img/blog/main-blog/m-blog-2.jpg"/>" alt="">
+                                  <img src="<c:url value="/staticResources/static/img/blog/main-blog/m-blog-2.jpg"/>" alt="">
                                   <div class="blog_details">
                                       <a th:href="@{/rock/single-blog}">
                                           <h2>The Basics Of Buying A Telescope</h2>
@@ -271,7 +271,7 @@
                           </div>
                           <div class="col-md-9">
                               <div class="blog_post">
-                                  <img src="<c:url value="/resource/static/img/blog/main-blog/m-blog-3.jpg"/>" alt="">
+                                  <img src="<c:url value="/staticResources/static/img/blog/main-blog/m-blog-3.jpg"/>" alt="">
                                   <div class="blog_details">
                                       <a th:href="@{/rock/single-blog}">
                                           <h2>The Glossary Of Telescopes</h2>
@@ -319,7 +319,7 @@
                           </div>
                           <div class="col-md-9">
                               <div class="blog_post">
-                                  <img src="<c:url value="/resource/static/img/blog/main-blog/m-blog-4.jpg"/>" alt="">
+                                  <img src="<c:url value="/staticResources/static/img/blog/main-blog/m-blog-4.jpg"/>" alt="">
                                   <div class="blog_details">
                                       <a th:href="@{/rock/single-blog}">
                                           <h2>The Night Sky</h2>
@@ -367,7 +367,7 @@
                           </div>
                           <div class="col-md-9">
                               <div class="blog_post">
-                                  <img src="<c:url value="/resource/static/img/blog/main-blog/m-blog-5.jpg"/>" alt="">
+                                  <img src="<c:url value="/staticResources/static/img/blog/main-blog/m-blog-5.jpg"/>" alt="">
                                   <div class="blog_details">
                                       <a th:href="@{/rock/single-blog}">
                                           <h2>Telescopes 101</h2>
@@ -430,7 +430,7 @@
                           <div class="br"></div>
                       </aside>
                       <aside class="single_sidebar_widget author_widget">
-                          <img class="author_img rounded-circle" src="<c:url value="/resource/static/img/blog/author.png"/>" alt="">
+                          <img class="author_img rounded-circle" src="<c:url value="/staticResources/static/img/blog/author.png"/>" alt="">
                           <h4>Charlie Barber</h4>
                           <p>Senior blog writer</p>
                           <div class="social_icon">
@@ -456,7 +456,7 @@
                       <aside class="single_sidebar_widget popular_post_widget">
                           <h3 class="widget_title">Popular Posts</h3>
                           <div class="media post_item">
-                              <img src="<c:url value="/resource/static/img/blog/popular-post/post1.jpg"/>" alt="post">
+                              <img src="<c:url value="/staticResources/static/img/blog/popular-post/post1.jpg"/>" alt="post">
                               <div class="media-body">
                                   <a href="single-blog.jsp">
                                       <h3>Space The Final Frontier</h3>
@@ -465,7 +465,7 @@
                               </div>
                           </div>
                           <div class="media post_item">
-                              <img src="<c:url value="/resource/static/img/blog/popular-post/post2.jpg"/>" alt="post">
+                              <img src="<c:url value="/staticResources/static/img/blog/popular-post/post2.jpg"/>" alt="post">
                               <div class="media-body">
                                   <a th:href="@{/rock/single-blog}">
                                       <h3>The Amazing Hubble</h3>
@@ -474,7 +474,7 @@
                               </div>
                           </div>
                           <div class="media post_item">
-                              <img src="<c:url value="/resource/static/img/blog/popular-post/post3.jpg"/>" alt="post">
+                              <img src="<c:url value="/staticResources/static/img/blog/popular-post/post3.jpg"/>" alt="post">
                               <div class="media-body">
                                   <a th:href="@{/rock/single-blog}">
                                       <h3>Astronomy Or Astrology</h3>
@@ -483,7 +483,7 @@
                               </div>
                           </div>
                           <div class="media post_item">
-                              <img src="<c:url value="/resource/static/img/blog/popular-post/post4.jpg"/>" alt="post">
+                              <img src="<c:url value="/staticResources/static/img/blog/popular-post/post4.jpg"/>" alt="post">
                               <div class="media-body">
                                   <a th:href="@{/rock/single-blog}">
                                       <h3>Asteroids telescope</h3>
@@ -495,7 +495,7 @@
                       </aside>
                       <aside class="single_sidebar_widget ads_widget">
                           <a href="#">
-                              <img class="img-fluid" src="<c:url value="/resource/static/img/blog/add.jpg"/>" alt="">
+                              <img class="img-fluid" src="<c:url value="/staticResources/static/img/blog/add.jpg"/>" alt="">
                           </a>
                           <div class="br"></div>
                       </aside>
@@ -622,12 +622,12 @@
         <a class="btn theme_btn" href="#">Follow us on instagram</a>
       </div>
       <div class="instagram_image row m0">
-        <a href="#"><img src="<c:url value="/resource/static/img/instagram/ins-1.jpg"/>" alt=""></a>
-        <a href="#"><img src="<c:url value="/resource/static/img/instagram/ins-2.jpg"/>" alt=""></a>
-        <a href="#"><img src="<c:url value="/resource/static/img/instagram/ins-3.jpg"/>" alt=""></a>
-        <a href="#"><img src="<c:url value="/resource/static/img/instagram/ins-4.jpg"/>" alt=""></a>
-        <a href="#"><img src="<c:url value="/resource/static/img/instagram/ins-5.jpg"/>" alt=""></a>
-        <a href="#"><img src="<c:url value="/resource/static/img/instagram/ins-6.jpg"/>" alt=""></a>
+        <a href="#"><img src="<c:url value="/staticResources/static/img/instagram/ins-1.jpg"/>" alt=""></a>
+        <a href="#"><img src="<c:url value="/staticResources/static/img/instagram/ins-2.jpg"/>" alt=""></a>
+        <a href="#"><img src="<c:url value="/staticResources/static/img/instagram/ins-3.jpg"/>" alt=""></a>
+        <a href="#"><img src="<c:url value="/staticResources/static/img/instagram/ins-4.jpg"/>" alt=""></a>
+        <a href="#"><img src="<c:url value="/staticResources/static/img/instagram/ins-5.jpg"/>" alt=""></a>
+        <a href="#"><img src="<c:url value="/staticResources/static/img/instagram/ins-6.jpg"/>" alt=""></a>
       </div>
     </div>
   </section>
@@ -668,12 +668,12 @@
 						<div class="single-footer-widget instafeed">
 							<h4 class="footer_title">Gallery</h4>
 							<ul class="list instafeed d-flex flex-wrap">
-								<li><img src="<c:url value="/resource/static/img/gallery/r1.jpg"/>" alt=""></li>
-								<li><img src="<c:url value="/resource/static/img/gallery/r2.jpg"/>" alt=""></li>
-								<li><img src="<c:url value="/resource/static/img/gallery/r3.jpg"/>" alt=""></li>
-								<li><img src="<c:url value="/resource/static/img/gallery/r5.jpg"/>" alt=""></li>
-								<li><img src="<c:url value="/resource/static/img/gallery/r7.jpg"/>" alt=""></li>
-								<li><img src="<c:url value="/resource/static/img/gallery/r8.jpg"/>" alt=""></li>
+								<li><img src="<c:url value="/staticResources/static/img/gallery/r1.jpg"/>" alt=""></li>
+								<li><img src="<c:url value="/staticResources/static/img/gallery/r2.jpg"/>" alt=""></li>
+								<li><img src="<c:url value="/staticResources/static/img/gallery/r3.jpg"/>" alt=""></li>
+								<li><img src="<c:url value="/staticResources/static/img/gallery/r5.jpg"/>" alt=""></li>
+								<li><img src="<c:url value="/staticResources/static/img/gallery/r7.jpg"/>" alt=""></li>
+								<li><img src="<c:url value="/staticResources/static/img/gallery/r8.jpg"/>" alt=""></li>
 							</ul>
 						</div>
 					</div>
@@ -726,13 +726,13 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 
 
-  <script src="<c:url value="/resource/static/vendors/jquery/jquery-3.2.1.min.js"/>"></script>
-  <script src="<c:url value="/resource/static/vendors/bootstrap/bootstrap.bundle.min.js"/>"></script>
-  <script src="<c:url value="/resource/static/vendors/skrollr.min.js"/>"></script>
-  <script src="<c:url value="/resource/static/vendors/owl-carousel/owl.carousel.min.js"/>"></script>
-  <script src="<c:url value="/resource/static/vendors/nice-select/jquery.nice-select.min.js"/>"></script>
-  <script src="<c:url value="/resource/static/vendors/jquery.ajaxchimp.min.js"/>"></script>
-  <script src="<c:url value="/resource/static/vendors/mail-script.js"/>"></script>
-  <script src="<c:url value="/resource/static/js/main.js"/>"></script>
+  <script src="<c:url value="/staticResources/static/vendors/jquery/jquery-3.2.1.min.js"/>"></script>
+  <script src="<c:url value="/staticResources/static/vendors/bootstrap/bootstrap.bundle.min.js"/>"></script>
+  <script src="<c:url value="/staticResources/static/vendors/skrollr.min.js"/>"></script>
+  <script src="<c:url value="/staticResources/static/vendors/owl-carousel/owl.carousel.min.js"/>"></script>
+  <script src="<c:url value="/staticResources/static/vendors/nice-select/jquery.nice-select.min.js"/>"></script>
+  <script src="<c:url value="/staticResources/static/vendors/jquery.ajaxchimp.min.js"/>"></script>
+  <script src="<c:url value="/staticResources/static/vendors/mail-script.js"/>"></script>
+  <script src="<c:url value="/staticResources/static/js/main.js"/>"></script>
 </body>
 </html>
