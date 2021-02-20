@@ -102,7 +102,7 @@
 			<div class="col-lg-6">
 			    <div class="login_form_inner">
 				  <h3>Log in to enter</h3>
-				  <form class="row login_form" action="<c:url value="/rock/login"/>" method="post">
+				  <form class="row login_form" action="<c:url value="/rock/postLogin"/>" method="post">
 					<c:if test="${param.error == true}">
 					    <div style="color: red; margin: 10px 0px;">Login or password is incorrect!</div>
 					</c:if>
