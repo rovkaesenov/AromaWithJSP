@@ -31,9 +31,7 @@ public class IndexController {
     @GetMapping("/index")
     public String getIndex(ModelMap map, Principal principal){
         List<ChildrenProducts> childrenProductsList = childrenProductsService.getChildrenProductsList();
-        Iterator<ChildrenProducts> childrenProductsIterator = childrenProductsList.iterator();
-        while (childrenProductsIterator.hasNext()){
-            ChildrenProducts childrenProducts = childrenProductsIterator.next();
+        for (ChildrenProducts childrenProducts : childrenProductsList) {
             String[] names = childrenProducts.getProductName().split("/");
             childrenProducts.setProductName(names[0] + names[1]);
         }

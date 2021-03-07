@@ -6,12 +6,15 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
-import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.web.servlet.config.annotation.*;
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
-import org.springframework.web.servlet.view.InternalResourceViewResolver;
-import org.springframework.web.servlet.view.JstlView;
+import org.springframework.web.servlet.resource.GzipResourceResolver;
+import org.springframework.web.servlet.resource.PathResourceResolver;
+import org.thymeleaf.spring5.SpringTemplateEngine;
+import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
+import org.thymeleaf.spring5.view.ThymeleafViewResolver;
+import org.thymeleaf.templatemode.TemplateMode;
 
 import java.util.Locale;
 
@@ -30,20 +33,12 @@ public class MvcConfiguration implements WebMvcConfigurer {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler(
-                "/resource/img/**",
-                "/resource/css/**",
-                "/resource/js/**",
-                "/resource/scss/**",
-                "/resource/fonts/**",
-                "/resource/vendors/**")
-                .addResourceLocations(
-                        "classpath:/resource/img/",
-                        "classpath:/resource/css/",
-                        "classpath:/resource/js/",
-                        "classpath:/resource/scss/",
-                        "classpath:/resource/fonts/",
-                        "classpath:/resource/vendors/");
+        registry.addResourceHandler("/css/**").addResourceLocations("classpath:/WEB-INF/static/css/").setCachePeriod(3600).resourceChain(true);
+        registry.addResourceHandler("/fonts/**").addResourceLocations("classpath:/WEB-INF/static/fonts/").setCachePeriod(3600).resourceChain(true);
+        registry.addResourceHandler("/img/**").addResourceLocations("classpath:/WEB-INF/static/img/").setCachePeriod(3600).resourceChain(true);
+        registry.addResourceHandler("/js/**").addResourceLocations("classpath:/WEB-INF/static/js/").setCachePeriod(3600).resourceChain(true);
+        registry.addResourceHandler("/scss/**").addResourceLocations("classpath:/WEB-INF/static/scss/").setCachePeriod(3600).resourceChain(true);
+        registry.addResourceHandler("/vendors/**").addResourceLocations("classpath:/WEB-INF/static/vendors/").setCachePeriod(3600).resourceChain(true);
     }
 
     @Override
@@ -52,27 +47,10 @@ public class MvcConfiguration implements WebMvcConfigurer {
     }
 
     @Override
-    public void configureViewResolvers(ViewResolverRegistry registry) {
-        registry.viewResolver(this.setupViewResolver());
-    }
-
-    @Override
     public void addInterceptors(InterceptorRegistry registry) {
         LocaleChangeInterceptor localeChangeInterceptor = new LocaleChangeInterceptor();
         localeChangeInterceptor.setParamName("lang");
         registry.addInterceptor(localeChangeInterceptor);
-    }
-
-    @Bean
-    public InternalResourceViewResolver setupViewResolver() {
-        InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-        resolver.setApplicationContext(applicationContext);
-        resolver.setViewClass(JstlView.class);
-        resolver.setCache(true);
-        resolver.setOrder(1);
-        resolver.setPrefix("/WEB-INF/templates/");
-        resolver.setSuffix(".jsp");
-        return resolver;
     }
 
     @Bean
@@ -90,5 +68,36 @@ public class MvcConfiguration implements WebMvcConfigurer {
         SessionLocaleResolver localeResolver = new SessionLocaleResolver();
         localeResolver.setDefaultLocale(new Locale("ru"));
         return localeResolver;
+    }
+
+    /* **************************************************************** */
+    /*  THYMELEAF-SPECIFIC ARTIFACTS                                    */
+    /*  TemplateResolver <- TemplateEngine <- ViewResolver              */
+    /* **************************************************************** */
+
+    @Bean
+    public SpringResourceTemplateResolver templateResolver(){
+        SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
+        templateResolver.setApplicationContext(this.applicationContext);
+        templateResolver.setPrefix("/WEB-INF/templates/");
+        templateResolver.setSuffix(".html");
+        templateResolver.setTemplateMode(TemplateMode.HTML);
+        templateResolver.setCacheable(true);
+        return templateResolver;
+    }
+
+    @Bean
+    public SpringTemplateEngine templateEngine(){
+        SpringTemplateEngine templateEngine = new SpringTemplateEngine();
+        templateEngine.setTemplateResolver(templateResolver());
+        templateEngine.setEnableSpringELCompiler(true);
+        return templateEngine;
+    }
+
+    @Bean
+    public ThymeleafViewResolver viewResolver(){
+        ThymeleafViewResolver viewResolver = new ThymeleafViewResolver();
+        viewResolver.setTemplateEngine(templateEngine());
+        return viewResolver;
     }
 }

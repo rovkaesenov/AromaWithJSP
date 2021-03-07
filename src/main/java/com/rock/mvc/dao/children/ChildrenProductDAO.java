@@ -21,9 +21,7 @@ public class ChildrenProductDAO {
     public List<ChildrenProducts> getChildrenProductsList(){
         List<ChildrenProducts> childrenProductsList = sessionFactory.getCurrentSession().
                 createQuery("from " + ChildrenProducts.class.getName(), ChildrenProducts.class).getResultList();
-        Iterator<ChildrenProducts> childrenProductsIterator = childrenProductsList.iterator();
-        while (childrenProductsIterator.hasNext()){
-            ChildrenProducts childrenProducts = childrenProductsIterator.next();
+        for (ChildrenProducts childrenProducts : childrenProductsList) {
             Hibernate.initialize(childrenProducts.getCategoryChildren().getCategory());
         }
         return childrenProductsList;

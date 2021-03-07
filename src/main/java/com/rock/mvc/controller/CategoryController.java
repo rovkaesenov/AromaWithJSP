@@ -1,14 +1,11 @@
 package com.rock.mvc.controller;
 
-import com.rock.mvc.entity.children.CategoryChildren;
 import com.rock.mvc.entity.children.ChildrenProducts;
 import com.rock.mvc.entity.men.MenProducts;
 import com.rock.mvc.service.CategoryChildrenService;
 import com.rock.mvc.service.CategoryForMenService;
 import com.rock.mvc.service.ChildrenProductsService;
 import com.rock.mvc.service.MenProductsService;
-import lombok.Getter;
-import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
@@ -16,7 +13,6 @@ import org.springframework.ui.ModelMap;
 import org.springframework.util.StreamUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletResponse;
@@ -48,9 +44,7 @@ public class CategoryController {
     @GetMapping(value = "/category/children")
     public String getCategoriesChildren(ModelMap map){
         List<ChildrenProducts> childrenProductsList = childrenProductsService.getChildrenProductsList();
-        Iterator<ChildrenProducts> childrenProductsIterator = childrenProductsList.iterator();
-        while (childrenProductsIterator.hasNext()){
-            ChildrenProducts childrenProducts = childrenProductsIterator.next();
+        for (ChildrenProducts childrenProducts : childrenProductsList) {
             String[] names = childrenProducts.getProductName().split("/");
             childrenProducts.setProductName(names[0] + names[1]);
         }
@@ -70,9 +64,7 @@ public class CategoryController {
     @GetMapping(value = "/category/men")
     public String getCategoriesMen(ModelMap map){
         List<MenProducts> menProductsList = menProductsService.getMenProductsList();
-        Iterator<MenProducts> menProductsIterator = menProductsList.iterator();
-        while (menProductsIterator.hasNext()){
-            MenProducts menProducts = menProductsIterator.next();
+        for (MenProducts menProducts : menProductsList) {
             String[] names = menProducts.getProductName().split("/");
             menProducts.setProductName(names[0] + names[1]);
         }
