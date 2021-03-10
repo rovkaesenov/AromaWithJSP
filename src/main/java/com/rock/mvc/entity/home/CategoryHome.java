@@ -1,4 +1,4 @@
-package com.rock.mvc.entity.children;
+package com.rock.mvc.entity.home;
 
 import com.rock.mvc.entity.category.Category;
 import lombok.Data;
@@ -8,8 +8,8 @@ import java.util.Set;
 
 @Data
 @Entity
-@Table(name = "category_children")
-public class CategoryChildren {
+@Table(name = "category_home")
+public class CategoryHome {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -21,10 +21,6 @@ public class CategoryChildren {
     @JoinColumn(name = "category_id", referencedColumnName = "id")
     private Category category;
 
-    @OneToMany(mappedBy = "categoryChildren", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<ChildrenProducts> childrenProductsSet;
-
-
-
-
+    @OneToMany(mappedBy = "categoryHome", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<HomeProducts> homeProductsSet;
 }

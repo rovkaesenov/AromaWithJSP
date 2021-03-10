@@ -1,4 +1,4 @@
-package com.rock.mvc.dao.categoryForMen;
+package com.rock.mvc.dao.men;
 
 import com.rock.mvc.entity.men.CategoryForMen;
 import org.hibernate.Hibernate;
@@ -21,9 +21,7 @@ public class CategoryForMenDAO {
     public List<CategoryForMen> getCategoryForMenList(){
         List<CategoryForMen> categoryForMenList = sessionFactory.getCurrentSession()
                 .createQuery("from " + CategoryForMen.class.getName(), CategoryForMen.class).getResultList();
-        Iterator<CategoryForMen> categoryForMenIterator = categoryForMenList.listIterator();
-        while (categoryForMenIterator.hasNext()){
-            CategoryForMen categoryForMen = categoryForMenIterator.next();
+        for (CategoryForMen categoryForMen : categoryForMenList) {
             Hibernate.initialize(categoryForMen.getCategory());
         }
         return categoryForMenList;

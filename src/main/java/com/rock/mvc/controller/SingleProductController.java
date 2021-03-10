@@ -2,8 +2,10 @@ package com.rock.mvc.controller;
 
 import com.rock.mvc.entity.children.ChildrenProducts;
 import com.rock.mvc.entity.men.MenProducts;
-import com.rock.mvc.service.ChildrenProductsService;
-import com.rock.mvc.service.MenProductsService;
+import com.rock.mvc.service.children.ChildrenProductsService;
+import com.rock.mvc.service.home.HomeProductsService;
+import com.rock.mvc.service.men.MenProductsService;
+import com.rock.mvc.service.sport.SportProductsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
@@ -23,38 +25,29 @@ public class SingleProductController {
 
     private final ChildrenProductsService childrenProductsService;
     private final MenProductsService menProductsService;
+    private final SportProductsService sportProductsService;
+    private final HomeProductsService homeProductsService;
 
     @Autowired
-    public SingleProductController(ChildrenProductsService childrenProductsService, MenProductsService menProductsService) {
+    public SingleProductController(ChildrenProductsService childrenProductsService, MenProductsService menProductsService,
+                                   SportProductsService sportProductsService, HomeProductsService homeProductsService) {
         this.childrenProductsService = childrenProductsService;
         this.menProductsService = menProductsService;
+        this.sportProductsService = sportProductsService;
+        this.homeProductsService = homeProductsService;
     }
 
 
-    @GetMapping(value = "/single-product/children")
-    public String getSingleProductWithChildrenId(@RequestParam("productId") Long id, ModelMap map){
+    @GetMapping(value = "/single-product")
+    public String getSingleProductWithChildrenId(@RequestParam("productId") Long id, @RequestParam("category") String category, ModelMap map){
         ChildrenProducts childrenProducts = childrenProductsService.getChildrenProducts(id);
         map.addAttribute("childrenProduct", childrenProducts);
         return "single-product";
     }
 
-    @GetMapping(value = "/single-product/displayChildren/{id}", produces = MediaType.IMAGE_JPEG_VALUE)
-    public void getChildrenProductImage(@PathVariable("id") Long id, HttpServletResponse response) throws IOException {
+    @GetMapping(value = "/single-product/image", produces = MediaType.IMAGE_JPEG_VALUE)
+    public void getChildrenProductImage(@RequestParam("id") Long id, @RequestParam("category") String category, HttpServletResponse response) throws IOException {
         byte[] bytes = childrenProductsService.getChildrenProducts(id).getImage();
-        StreamUtils.copy(bytes, response.getOutputStream());
-        response.getOutputStream().close();
-    }
-
-    @GetMapping(value = "/single-product/men")
-    public String getSingleProductWithMenId(@RequestParam("productId") Long id, ModelMap map){
-        MenProducts menProducts = menProductsService.getMenProducts(id);
-        map.addAttribute("menProduct", menProducts);
-        return "single-product";
-    }
-
-    @GetMapping(value = "/single-product/displayMen/{id}", produces = MediaType.IMAGE_JPEG_VALUE)
-    public void getMenProductImage(@PathVariable("id") Long id, HttpServletResponse response) throws IOException {
-        byte[] bytes = menProductsService.getMenProducts(id).getImage();
         StreamUtils.copy(bytes, response.getOutputStream());
         response.getOutputStream().close();
     }

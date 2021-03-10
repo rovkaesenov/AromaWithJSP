@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Aroma Shop - Home</title>
+	<meta charset="UTF-8" content="text/html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Aroma Shop - Home</title>
 	<link rel="icon" th:href="@{/static/img/Fevicon.png}" type="image/png">
 	<link rel="stylesheet" href="/static/vendors/bootstrap/bootstrap.min.css" type="text/css">
 	<link rel="stylesheet" href="/static/vendors/fontawesome/css/all.min.css" type="text/css">
@@ -86,39 +86,37 @@
 		</section>
     	<!--================ Hero banner start =================-->
 
-<!--    	&lt;!&ndash; ================ trending product section start ================= &ndash;&gt;-->
-<!--		<section class="section-margin calc-60px">-->
-<!--			<div class="container">-->
+    	<!-- ================ trending product section start ================= -->
+		<section class="section-margin calc-60px">
+			<div class="container">
 
-<!--				<div class="section-intro pb-60px">-->
-<!--					<p>Popular Item in the market</p>-->
-<!--					<h2>Trending <span class="section-intro__style">Product</span></h2>-->
-<!--				</div>-->
+				<div class="section-intro pb-60px">
+					<p>Popular Item in the market</p>
+					<h2>Trending <span class="section-intro__style">Product</span></h2>
+				</div>
 
-<!--				<div class="row">-->
-<!--					<div th:each="chList : ${childrenProductsList}">-->
-<!--						<div class="col-md-6 col-lg-4 col-xl-3">-->
-<!--							<div class="card text-center card-product">-->
-<!--								<div class="card-product__img">-->
-<!--									<img class="card-img" th:src="@{/rock/index/display/${chList.id}}" alt="" src="">-->
-<!--									<ul class="card-product__imgOverlay">-->
-<!--										<li><button><i class="ti-search"></i></button></li>-->
-<!--										<li><button><i class="ti-shopping-cart"></i></button></li>-->
-<!--										<li><button><i class="ti-heart"></i></button></li>-->
-<!--									</ul>-->
-<!--								</div>-->
-<!--								<div class="card-body">-->
-<!--									<p th:text="${chList.categoryChildren.subCategoryNames}"></p>-->
-<!--									<h4 class="card-product__title"><a th:href="@{/rock/single-product/children?productId=${chList.id}}"><p th:text="${chList.productName}"></p></a></h4>-->
-<!--									<p class="card-product__price" th:text="${chList.price}рб"></p>-->
-<!--								</div>-->
-<!--							</div>-->
-<!--						</div>-->
-<!--					</div>-->
-<!--				</div>-->
-<!--			</div>-->
-<!--		</section>-->
-<!--    	&lt;!&ndash; ================ trending product section end ================= &ndash;&gt;-->
+				<div class="row">
+				    <div class="col-md-6 col-lg-4 col-xl-3" th:each="chList : ${childrenProductsList}">
+					  <div class="card text-center card-product">
+						<div class="card-product__img">
+						    <img class="card-img" th:src="@{/rock/index/display/{id}(id = ${chList.getId()})}" alt="" >
+						    <ul class="card-product__imgOverlay">
+							  <li><button><i class="ti-search"></i></button></li>
+							  <li><button><i class="ti-shopping-cart"></i></button></li>
+							  <li><button><i class="ti-heart"></i></button></li>
+						    </ul>
+						</div>
+						<div class="card-body">
+						    <p th:text="${chList.categoryChildren.getSubCategoryNames()}"></p>
+						    <h4 class="card-product__title"><a th:href="@{/rock/single-product/children?productId=${chList.id}}"><p th:text="${chList.getProductName()}"></p></a></h4>
+						    <p class="card-product__price" th:text="'$' + ${chList.getPrice()}"></p></p>
+						</div>
+					  </div>
+				    </div>
+				</div>
+			</div>
+		</section>
+    	<!-- ================ trending product section end ================= -->
 
 
     	<!-- ================ offer section start ================= -->

@@ -1,4 +1,4 @@
-package com.rock.mvc.service;
+package com.rock.mvc.service.men;
 
 import com.rock.mvc.dao.men.MenProductsDAO;
 import com.rock.mvc.entity.men.MenProducts;

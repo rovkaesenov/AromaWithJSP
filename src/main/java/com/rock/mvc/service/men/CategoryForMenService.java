@@ -1,6 +1,6 @@
-package com.rock.mvc.service;
+package com.rock.mvc.service.men;
 
-import com.rock.mvc.dao.categoryForMen.CategoryForMenDAO;
+import com.rock.mvc.dao.men.CategoryForMenDAO;
 import com.rock.mvc.entity.men.CategoryForMen;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,6 +1,6 @@
-package com.rock.mvc.service;
+package com.rock.mvc.service.children;
 
-import com.rock.mvc.dao.categoryChildren.CategoryChildrenDAO;
+import com.rock.mvc.dao.children.CategoryChildrenDAO;
 import com.rock.mvc.entity.children.CategoryChildren;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

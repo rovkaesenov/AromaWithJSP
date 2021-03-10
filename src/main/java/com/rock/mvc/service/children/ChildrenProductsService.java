@@ -1,4 +1,4 @@
-package com.rock.mvc.service;
+package com.rock.mvc.service.children;
 
 import com.rock.mvc.dao.children.ChildrenProductDAO;
 import com.rock.mvc.entity.children.ChildrenProducts;

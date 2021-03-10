@@ -1,7 +1,7 @@
 package com.rock.mvc.controller;
 
 import com.rock.mvc.entity.children.ChildrenProducts;
-import com.rock.mvc.service.ChildrenProductsService;
+import com.rock.mvc.service.children.ChildrenProductsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.security.Principal;
-import java.util.Iterator;
 import java.util.List;
 
 @Controller
@@ -30,10 +29,10 @@ public class IndexController {
 
     @GetMapping("/index")
     public String getIndex(ModelMap map, Principal principal){
-        List<ChildrenProducts> childrenProductsList = childrenProductsService.getChildrenProductsList();
+        List<ChildrenProducts> childrenProductsList = childrenProductsService.getChildrenProductsList().subList(0, 8);
         for (ChildrenProducts childrenProducts : childrenProductsList) {
-            String[] names = childrenProducts.getProductName().split("/");
-            childrenProducts.setProductName(names[0] + names[1]);
+            String[] names = childrenProducts.getProductName().split("/", 2);
+            childrenProducts.setProductName(names[0]);
         }
         map.addAttribute("childrenProductsList", childrenProductsList);
         return "index";

@@ -2,10 +2,10 @@ package com.rock.mvc.controller;
 
 import com.rock.mvc.entity.children.ChildrenProducts;
 import com.rock.mvc.entity.men.MenProducts;
-import com.rock.mvc.service.CategoryChildrenService;
-import com.rock.mvc.service.CategoryForMenService;
-import com.rock.mvc.service.ChildrenProductsService;
-import com.rock.mvc.service.MenProductsService;
+import com.rock.mvc.service.children.CategoryChildrenService;
+import com.rock.mvc.service.men.CategoryForMenService;
+import com.rock.mvc.service.children.ChildrenProductsService;
+import com.rock.mvc.service.men.MenProductsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.Iterator;
 import java.util.List;
 
 @Controller

@@ -1,15 +1,15 @@
 package com.rock.mvc.entity.category;
 
 import com.rock.mvc.entity.children.CategoryChildren;
+import com.rock.mvc.entity.home.CategoryHome;
 import com.rock.mvc.entity.men.CategoryForMen;
-import lombok.Getter;
-import lombok.Setter;
+import com.rock.mvc.entity.sport.CategorySport;
+import lombok.Data;
 
 import javax.persistence.*;
 import java.util.Set;
 
-@Getter
-@Setter
+@Data
 @Entity
 @Table(name = "category")
 public class Category {
@@ -26,4 +26,10 @@ public class Category {
 
     @OneToMany(mappedBy = "category", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<CategoryForMen> categoryForMenSet;
+
+    @OneToMany(mappedBy = "category", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<CategoryHome> categoryHomeSet;
+
+    @OneToMany(mappedBy = "category", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<CategorySport> categorySportSet;
 }

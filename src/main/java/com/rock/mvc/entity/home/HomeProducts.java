@@ -1,4 +1,4 @@
-package com.rock.mvc.entity.children;
+package com.rock.mvc.entity.home;
 
 import lombok.Data;
 
@@ -6,8 +6,8 @@ import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name = "children_products")
-public class ChildrenProducts {
+@Table(name = "home_products")
+public class HomeProducts {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -30,7 +30,6 @@ public class ChildrenProducts {
     private byte[] image;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "category_children_id", referencedColumnName = "id")
-    private CategoryChildren categoryChildren;
-
+    @JoinColumn(name = "category_home_id", referencedColumnName = "id")
+    private CategoryHome categoryHome;
 }
