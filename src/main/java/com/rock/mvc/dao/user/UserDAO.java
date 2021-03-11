@@ -8,10 +8,10 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public class UserDAO {
-    private final SessionFactory sessionFactory;
+    private SessionFactory sessionFactory;
 
     @Autowired
-    public UserDAO(SessionFactory sessionFactory) {
+    public void setSessionFactory(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }
 

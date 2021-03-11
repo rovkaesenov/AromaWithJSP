@@ -38,17 +38,17 @@ public class SingleProductController {
     }
 
 
-    @GetMapping(value = "/single-product")
-    public String getSingleProductWithChildrenId(@RequestParam("productId") Long id, @RequestParam("category") String category, ModelMap map){
-        ChildrenProducts childrenProducts = childrenProductsService.getChildrenProducts(id);
-        map.addAttribute("childrenProduct", childrenProducts);
-        return "single-product";
-    }
-
-    @GetMapping(value = "/single-product/image", produces = MediaType.IMAGE_JPEG_VALUE)
-    public void getChildrenProductImage(@RequestParam("id") Long id, @RequestParam("category") String category, HttpServletResponse response) throws IOException {
-        byte[] bytes = childrenProductsService.getChildrenProducts(id).getImage();
-        StreamUtils.copy(bytes, response.getOutputStream());
-        response.getOutputStream().close();
-    }
+//    @GetMapping(value = "/single-product")
+//    public String getSingleProductWithChildrenId(@RequestParam("productId") Long id, @RequestParam("category") String category, ModelMap map){
+//        ChildrenProducts childrenProducts = childrenProductsService.getChildrenProducts(id);
+//        map.addAttribute("childrenProduct", childrenProducts);
+//        return "single-product";
+//    }
+//
+//    @GetMapping(value = "/single-product/image", produces = MediaType.IMAGE_JPEG_VALUE)
+//    public void getChildrenProductImage(@RequestParam("id") Long id, @RequestParam("category") String category, HttpServletResponse response) throws IOException {
+//        byte[] bytes = childrenProductsService.getChildrenProducts(id).getImage();
+//        StreamUtils.copy(bytes, response.getOutputStream());
+//        response.getOutputStream().close();
+//    }
 }

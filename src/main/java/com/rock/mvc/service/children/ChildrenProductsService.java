@@ -12,10 +12,10 @@ import java.util.List;
 @Transactional
 public class ChildrenProductsService {
 
-    private final ChildrenProductDAO childrenProductDAO;
+    private ChildrenProductDAO childrenProductDAO;
 
     @Autowired
-    public ChildrenProductsService(ChildrenProductDAO childrenProductDAO) {
+    public void setChildrenProductDAO(ChildrenProductDAO childrenProductDAO) {
         this.childrenProductDAO = childrenProductDAO;
     }
 

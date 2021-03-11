@@ -11,10 +11,10 @@ import java.util.List;
 @Service
 @Transactional
 public class SportProductsService {
-    private final SportProductsDAO sportProductsDAO;
+    private SportProductsDAO sportProductsDAO;
 
     @Autowired
-    public SportProductsService(SportProductsDAO sportProductsDAO) {
+    public void setSportProductsDAO(SportProductsDAO sportProductsDAO) {
         this.sportProductsDAO = sportProductsDAO;
     }
 

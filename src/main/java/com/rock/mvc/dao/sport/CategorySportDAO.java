@@ -10,10 +10,10 @@ import java.util.List;
 
 @Repository
 public class CategorySportDAO {
-    private final SessionFactory sessionFactory;
+    private SessionFactory sessionFactory;
 
     @Autowired
-    public CategorySportDAO(SessionFactory sessionFactory) {
+    public void setSessionFactory(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }
 

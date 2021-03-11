@@ -11,10 +11,10 @@ import java.util.List;
 @Service
 @Transactional
 public class CategoryForMenService {
-    private final CategoryForMenDAO categoryForMenDAO;
+    private CategoryForMenDAO categoryForMenDAO;
 
     @Autowired
-    public CategoryForMenService(CategoryForMenDAO categoryForMenDAO) {
+    public void setCategoryForMenDAO(CategoryForMenDAO categoryForMenDAO) {
         this.categoryForMenDAO = categoryForMenDAO;
     }
 

@@ -11,10 +11,10 @@ import java.util.List;
 
 @Repository
 public class CategoryForMenDAO {
-    private final SessionFactory sessionFactory;
+    private SessionFactory sessionFactory;
 
     @Autowired
-    public CategoryForMenDAO(SessionFactory sessionFactory) {
+    public void setSessionFactory(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }
 

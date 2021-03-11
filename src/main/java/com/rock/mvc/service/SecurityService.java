@@ -26,15 +26,6 @@ public class SecurityService {
     }
 
     @Transactional
-    public String findLoggedInUserName(){
-        Object userDetails = SecurityContextHolder.getContext().getAuthentication().getDetails();
-        if (userDetails instanceof UserDetails){
-            return ((UserDetails)userDetails).getUsername();
-        }
-        return null;
-    }
-
-    @Transactional
     public void autoLogin(String email, String password){
         UserDetails userDetails = userDetailsService.loadUserByUsername(email);
         UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(userDetails, password, userDetails.getAuthorities());

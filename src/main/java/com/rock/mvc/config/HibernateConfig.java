@@ -9,11 +9,12 @@ import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
+import java.io.IOException;
 import java.util.Properties;
 
 @Configuration
 @EnableTransactionManagement
-@ComponentScan(basePackages = {"com.rock.mvc"})
+//@ComponentScan("com.rock.mvc")
 public class HibernateConfig {
 
     @Bean
@@ -38,17 +39,18 @@ public class HibernateConfig {
         return properties;
     }
 
-    @Bean
-    public LocalSessionFactoryBean sessionFactoryBean(){
+    @Bean(value = "sessionFactory")
+    public LocalSessionFactoryBean sessionFactoryBean() throws IOException {
         LocalSessionFactoryBean sessionFactoryBean = new LocalSessionFactoryBean();
         sessionFactoryBean.setDataSource(dataSource());
-        sessionFactoryBean.setHibernateProperties(hibernateProperties());
         sessionFactoryBean.setPackagesToScan("com.rock.mvc.entity");
+        sessionFactoryBean.setHibernateProperties(hibernateProperties());
+        sessionFactoryBean.afterPropertiesSet();
         return sessionFactoryBean;
     }
 
     @Bean
-    public HibernateTransactionManager getHibernateTransactionManager(){
+    public HibernateTransactionManager getHibernateTransactionManager() throws IOException {
         HibernateTransactionManager transactionManager = new HibernateTransactionManager();
         transactionManager.setSessionFactory(sessionFactoryBean().getObject());
         return transactionManager;

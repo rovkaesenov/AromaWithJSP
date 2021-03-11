@@ -11,10 +11,10 @@ import java.util.List;
 @Service
 @Transactional
 public class CategoryChildrenService {
-    private final CategoryChildrenDAO categoryChildrenDAO;
+    private CategoryChildrenDAO categoryChildrenDAO;
 
     @Autowired
-    public CategoryChildrenService(CategoryChildrenDAO categoryChildrenDAO) {
+    public void setCategoryChildrenDAO(CategoryChildrenDAO categoryChildrenDAO) {
         this.categoryChildrenDAO = categoryChildrenDAO;
     }
 

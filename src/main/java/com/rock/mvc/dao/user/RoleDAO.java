@@ -8,10 +8,10 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class RoleDAO {
 
-    private final SessionFactory sessionFactory;
+    private SessionFactory sessionFactory;
 
     @Autowired
-    public RoleDAO(SessionFactory sessionFactory) {
+    public void setSessionFactory(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }
 

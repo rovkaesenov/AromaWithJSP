@@ -11,10 +11,10 @@ import java.util.List;
 @Service
 @Transactional
 public class CategoryHomeService {
-    private final CategoryHomeDAO categoryHomeDAO;
+    private CategoryHomeDAO categoryHomeDAO;
 
     @Autowired
-    public CategoryHomeService(CategoryHomeDAO categoryHomeDAO) {
+    public void setCategoryHomeDAO(CategoryHomeDAO categoryHomeDAO) {
         this.categoryHomeDAO = categoryHomeDAO;
     }
 
