@@ -98,15 +98,19 @@
 			<div class="col-lg-6">
 			    <div class="login_form_inner">
 				  <h3>Log in to enter</h3>
-				  <form class="row login_form" th:action="@{/rock/postLogin}" method="post">
-<%--					<c:if test="${param.error == true}">--%>
-<%--					    <div style="color: red; margin: 10px 0px;">Login or password is incorrect!</div>--%>
-<%--					</c:if>--%>
+				  <form class="row login_form" th:action="@{/rock/postLogin}" th:method="post">
+					<th:block th:if="${param.error == true}">
+					    <div style="color: red; margin: 10px 0px;">Login or password is incorrect!</div>
+					</th:block>
 					<div class="col-md-12 form-group">
-					    <input  type="text" class="form-control" name="email" placeholder="Email"/>
+					    <label>
+						  <input  type="text" class="form-control" name="email" placeholder="Email"/>
+					    </label>
 					</div>
 					<div class="col-md-12 form-group">
-					    <input  type="text" class="form-control" name="password" placeholder="Password"/>
+					    <label>
+						  <input  type="text" class="form-control" name="password" placeholder="Password"/>
+					    </label>
 					</div>
 					<div class="col-md-12 form-group">
 					    <button type="submit" value="submit" class="button button-login w-100">Log In</button>

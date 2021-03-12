@@ -98,24 +98,24 @@
 			<div class="col-lg-6">
 			    <div class="login_form_inner register_form_inner">
 				  <h3>Create an account</h3>
-				  <form class="row login_form" action="/rock/postRegister" method="post" modelAttribute="user">
+				  <form class="row login_form" th:action="@{/rock/postRegister}" th:method="post" th:object="${user}">
 					<div class="col-md-12 form-group">
-					    <input class="form-control" id="userName" placeholder="Username" path="userName"/>
+					    <input class="form-control" id="userName" placeholder="Username" th:field="*{userName}"/>
 <!--					    <small><form:errors cssStyle="color: red;" path="userName" cssClass="errorMessage"/></small>-->
 					</div>
 
 					<div class="col-md-12 form-group">
-					    <input class="form-control" id="email" path="email" placeholder="Email Address"/>
+					    <input class="form-control" id="email" th:field="*{email}" placeholder="Email Address"/>
 <!--					    <small><form:errors cssStyle="color: red;" path="email" cssClass="errorMessage"/></small>-->
 					</div>
 
 					<div class="col-md-12 form-group">
-					    <input class="form-control" path="password" id="password" placeholder="Password"/>
+					    <input class="form-control" th:field="*{password}" id="password" placeholder="Password"/>
 <!--					    <small><form:errors cssStyle="color: red;" path="password" cssClass="errorMessage"/></small>-->
 					</div>
 
 					<div class="col-md-12 form-group">
-					    <input type="text" class="form-control" id="confirmPassword" path="confirmPassword" placeholder="Confirm Password"/>
+					    <input type="text" class="form-control" id="confirmPassword" th:field="*{confirmPassword}" placeholder="Confirm Password"/>
 <!--					    <small><form:errors cssStyle="color: red;" path="confirmPassword" cssClass="errorMessage"/></small>-->
 					</div>
 

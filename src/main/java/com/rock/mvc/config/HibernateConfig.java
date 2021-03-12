@@ -14,7 +14,7 @@ import java.util.Properties;
 
 @Configuration
 @EnableTransactionManagement
-//@ComponentScan("com.rock.mvc")
+@ComponentScan("com.rock.mvc")
 public class HibernateConfig {
 
     @Bean

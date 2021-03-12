@@ -1,12 +1,11 @@
 package com.rock.mvc.entity.men;
 
-import lombok.Getter;
-import lombok.Setter;
+import com.rock.mvc.entity.men.CategoryForMen;
+import lombok.Data;
 
 import javax.persistence.*;
 
-@Getter
-@Setter
+@Data
 @Entity
 @Table(name = "man_products")
 public class MenProducts {

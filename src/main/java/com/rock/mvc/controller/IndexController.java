@@ -4,26 +4,26 @@ import com.rock.mvc.entity.children.ChildrenProducts;
 import com.rock.mvc.service.children.ChildrenProductsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.util.StreamUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.security.Principal;
 import java.util.List;
 
-@Controller
+@RestController
 @RequestMapping("/rock")
 public class IndexController {
 
-    private final ChildrenProductsService childrenProductsService;
+    private ChildrenProductsService childrenProductsService;
 
     @Autowired
-    public IndexController(ChildrenProductsService childrenProductsService) {
+    public void setAllServices(ChildrenProductsService childrenProductsService) {
         this.childrenProductsService = childrenProductsService;
     }
 

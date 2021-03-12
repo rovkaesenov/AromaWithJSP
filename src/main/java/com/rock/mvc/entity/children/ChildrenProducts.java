@@ -1,5 +1,6 @@
 package com.rock.mvc.entity.children;
 
+import com.rock.mvc.entity.children.CategoryChildren;
 import lombok.Data;
 
 import javax.persistence.*;

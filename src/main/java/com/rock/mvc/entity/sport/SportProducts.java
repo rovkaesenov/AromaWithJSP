@@ -1,5 +1,6 @@
 package com.rock.mvc.entity.sport;
 
+import com.rock.mvc.entity.sport.CategorySport;
 import lombok.Data;
 
 import javax.persistence.*;

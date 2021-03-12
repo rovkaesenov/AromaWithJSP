@@ -1,5 +1,6 @@
 package com.rock.mvc.entity.home;
 
+import com.rock.mvc.entity.home.CategoryHome;
 import lombok.Data;
 
 import javax.persistence.*;

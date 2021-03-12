@@ -5,23 +5,22 @@ import com.rock.mvc.service.SecurityService;
 import com.rock.mvc.service.UserService;
 import com.rock.mvc.validator.UserRegisterValidator;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
-@Controller
+@RestController
 @RequestMapping("/rock")
 public class RegisterController {
 
-    private final UserService userService;
-    private final SecurityService securityService;
-    private final UserRegisterValidator userRegisterValidator;
+    private UserService userService;
+    private SecurityService securityService;
+    private UserRegisterValidator userRegisterValidator;
 
     @Autowired
-    public RegisterController(UserService userService, SecurityService securityService, UserRegisterValidator userRegisterValidator) {
+    public void setAllServices(UserService userService, SecurityService securityService, UserRegisterValidator userRegisterValidator) {
         this.userService = userService;
         this.securityService = securityService;
         this.userRegisterValidator = userRegisterValidator;

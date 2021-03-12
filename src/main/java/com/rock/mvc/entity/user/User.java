@@ -1,5 +1,6 @@
 package com.rock.mvc.entity.user;
 
+import com.rock.mvc.entity.user.Role;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 import org.hibernate.validator.constraints.Email;
