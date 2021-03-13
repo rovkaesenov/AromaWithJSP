@@ -9,9 +9,9 @@ import lombok.Data;
 import javax.persistence.*;
 import java.util.Set;
 
-@Data
 @Entity
 @Table(name = "category")
+@Data
 public class Category {
 
     @Id

@@ -6,9 +6,9 @@ import lombok.Data;
 import javax.persistence.*;
 import java.util.Set;
 
-@Data
 @Entity
 @Table(name = "category_for_men")
+@Data
 public class CategoryForMen {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

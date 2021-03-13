@@ -1,7 +1,5 @@
 package com.rock.mvc.entity.user;
 
-import com.rock.mvc.entity.user.Role;
-import jakarta.validation.constraints.Size;
 import lombok.Data;
 import org.hibernate.validator.constraints.Email;
 
@@ -9,9 +7,9 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.Set;
 
-@Data
 @Entity
 @Table(name = "users")
+@Data
 public class User {
 
     @Id
@@ -29,7 +27,6 @@ public class User {
 
     @Column(name = "passwords")
     @NotNull
-    @Size(min = 4, max = 20, message = "Password must be between 4 and 10")
     private String password;
 
     @NotNull

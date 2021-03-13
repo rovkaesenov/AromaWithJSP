@@ -6,8 +6,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
-import org.springframework.web.servlet.config.annotation.*;
-import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
+import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 import org.thymeleaf.spring5.SpringTemplateEngine;
 import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
@@ -44,12 +46,12 @@ public class MvcConfiguration implements WebMvcConfigurer {
         configurer.enable();
     }
 
-    @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-        LocaleChangeInterceptor localeChangeInterceptor = new LocaleChangeInterceptor();
-        localeChangeInterceptor.setParamName("lang");
-        registry.addInterceptor(localeChangeInterceptor);
-    }
+//    @Override
+//    public void addInterceptors(InterceptorRegistry registry) {
+//        LocaleChangeInterceptor localeChangeInterceptor = new LocaleChangeInterceptor();
+//        localeChangeInterceptor.setParamName("lang");
+//        registry.addInterceptor(localeChangeInterceptor);
+//    }
 
     @Bean
     public ReloadableResourceBundleMessageSource messageSource() {
@@ -57,14 +59,14 @@ public class MvcConfiguration implements WebMvcConfigurer {
         messageSource.setUseCodeAsDefaultMessage(true);
         messageSource.setBasename("classpath:messages");
         messageSource.setDefaultEncoding("UTF-8");
-        messageSource.setCacheSeconds(-1);
+        messageSource.setCacheSeconds(0);
         return messageSource;
     }
 
     @Bean
     public SessionLocaleResolver localeResolver(){
         SessionLocaleResolver localeResolver = new SessionLocaleResolver();
-        localeResolver.setDefaultLocale(new Locale("ru"));
+        localeResolver.setDefaultLocale(Locale.ENGLISH);
         return localeResolver;
     }
 
@@ -88,7 +90,7 @@ public class MvcConfiguration implements WebMvcConfigurer {
     public SpringTemplateEngine templateEngine(){
         SpringTemplateEngine templateEngine = new SpringTemplateEngine();
         templateEngine.setTemplateResolver(templateResolver());
-        templateEngine.setEnableSpringELCompiler(true);
+        templateEngine.setEnableSpringELCompiler(false);
         return templateEngine;
     }
 
